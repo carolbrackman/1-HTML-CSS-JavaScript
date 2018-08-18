@@ -8,6 +8,10 @@ label {
 
 }
 
+label:hover {
+    font-size: 40px;
+}
+
 .labeltextstyle {
     width: auto
 }

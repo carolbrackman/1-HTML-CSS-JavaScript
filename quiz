@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<body>
+    <form id="uploadForm" method="get" action="upload.php">
+        <label for="studentID">Student ID</label><br />
+        <input type="text name="studentID" id="studentID"
+            placeholder="Enter your student ID here" />
+        <label for ="fileToUpload">Select a File to Upload</label><br />
+        <input type="file" id="fileToUpload" />
+        <input type="submit" value="Upload" />
+    </form>
+</body>
+</html>

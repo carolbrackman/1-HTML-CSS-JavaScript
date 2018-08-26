@@ -16,7 +16,7 @@
         // Generate a random number in the range "[0, length of array -1]"
         var random_number = Math.random() * color_array.length;
         var random_number_integer = Math.floor(random_number);
-        target_index = random_number_integer;
+        target_index = color_array[random_number_integer];
         alert("The color to guess is: " + target_index);
 
         while(!finished) {
@@ -42,14 +42,11 @@
            if (guess_input < target_index) {
                alert("Your color is alphabetically lower");
                return false;
-            } else {
-                myBody = document.getElementsByTagName("body")[0];
-                myBody.style.background = target;
-                setTimeout(function () {
-                 alert("Congratulations! You have guessed the color! \n\n" + "It took you " + guesses + "guesses to finish the game! \n\n" + "You can see the color in the background.")
-                }, 100);
+            } 
+            document.getElementsByTagName("body").setAttribute("bgcolor", "beige");
+                 alert("Congratulations! You have guessed the color! \n\n It took you " + + "guesses to finish the game! \n\n" + "You can see the color in the background.")
                 return true;
-            }
+            
         }
             
 

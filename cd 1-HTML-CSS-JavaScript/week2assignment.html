@@ -21,14 +21,11 @@
 
         while(!finished) {
            guess_input_text = prompt("I am thinking of a color in this list \n\n" + 
-           color_array.join(", ") + 
-            "\n\n What color am I thinking of?");
+           color_array.join(", ") + "\n\n What color am I thinking of?");
            guess_input = (guess_input_text);
            guesses += 1;
            finished = check_guess();
-
-   
-}
+        }
 }
 
      function check_guess() {
@@ -39,15 +36,13 @@
            
            if (guess_input > target_index) {
                alert("Your color is alphabetically higher");
-               do_game();
+               return false;
             }
             
            if (guess_input < target_index) {
                alert("Your color is alphabetically lower");
-               do game;
-            }
-
-            if (guess_input = target_index) {
+               return false;
+            } else {
                 myBody = document.getElementsByTagName("body")[0];
                 myBody.style.background = target;
                 setTimeout(function () {

@@ -43,13 +43,13 @@
                alert("Your color is alphabetically lower");
                return false;
             } 
-            document.getElementsByTagName("body").setAttribute("bgcolor", "beige");
-                 alert("Congratulations! You have guessed the color! \n\n It took you " + + "guesses to finish the game! \n\n" + "You can see the color in the background.")
+
+           if (guess_input == target_index) {
+                document.body.style.backgrounColor = target_index;
+                alert("You are right!  You took " + guesses + "guesses!\n\n Check the background!!")
                 return true;
             
         }
-            
-
     </script>  
 </body>
 </html>
